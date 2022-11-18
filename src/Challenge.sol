@@ -56,7 +56,6 @@ contract Challenge is IERC721Receiver {
         timeAtLastPlayEther = 0;
     }
 
-    // 
     function claimNFTs() public {
         require(checkTime(timeAtLastPlayNFT), "A day hasn't gone through since the last play!");
         require(lastAddressNFT == msg.sender, "Unfortunately you are not the winner. Sorry!");
